@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     "Business Advisory",
     "Accounting Services"
   ],
-  authors: [{ name: "Apex & Partners CA" }],
+  authors: [{ name: "Narhari V.Dixit & Co." }],
   openGraph: {
-    title: "Apex & Partners | Chartered Accountants & Business Advisory",
+    title: "Narhari V.Dixit & Co. | Chartered Accountants & Business Advisory",
     description: "Clarity in Numbers. Confidence in Business. Expert CA, Tax & Audit solutions for enterprise success.",
     url: "https://apexca.example.com",
     siteName: "Apex & Partners CA",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apex & Partners | Chartered Accountants",
+    title: "Narhari V.Dixit & Co. | Chartered Accountants",
     description: "Clarity in Numbers. Confidence in Business. Premier CA Services.",
   },
 };

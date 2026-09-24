@@ -212,10 +212,10 @@ export default function AboutSection() {
               </div>
 
               <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#E8F3FA] flex items-center justify-center shrink-0">
- <Briefcase className="w-5 h-5 text-[#3B82C4] shrink-0 mt-0.5" />
-              </div>
-               
+                <div className="w-10 h-10 rounded-full bg-[#E8F3FA] flex items-center justify-center shrink-0">
+                  <Briefcase className="w-5 h-5 text-[#3B82C4] shrink-0 mt-0.5" />
+                </div>
+
                 <div>
                   <h4 className="text-[14px] sm:text-[16px] font-semibold text-[#263746]">
                     Multi-industry
