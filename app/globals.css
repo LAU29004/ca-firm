@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
+
+  /* User Specified Blue Palette Tokens */
+  --color-deep-blue: #24527A;
+  --color-primary-blue: #3B82C4;
+  --color-sky-blue: #5BA7D1;
+  --color-light-blue: #E8F3FA;
+  --color-cool-white: #F8FAFC;
+  --color-charcoal: #263746;
+  --color-slate-text: #647586;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Smooth Scrolling & Lenis base */
+html.lenis, html.lenis body {
+  height: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
 
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #24527A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82C4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5BA7D1;
+}
+
+/* Base Body Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8FAFC;
+  color: #647586;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Horizontal scroll hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Background grid patterns */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 196, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 196, 0.06) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(91, 167, 209, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(91, 167, 209, 0.08) 1px, transparent 1px);
 }
