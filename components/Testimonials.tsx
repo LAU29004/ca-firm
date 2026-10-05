@@ -1,21 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Quote, Star, ShieldCheck } from "lucide-react";
+import { Quote, Star, ShieldCheck } from "lucide-react";
 import { testimonialsData, TestimonialItem } from "@/lib/data";
+
+const AUTO_SCROLL_MS = 5000;
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
-  };
+  // Auto-advance. Re-runs on every index change, so clicking a dot resets the timer.
+  useEffect(() => {
+    if (isPaused || testimonialsData.length <= 1) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
-  };
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
+    }, AUTO_SCROLL_MS);
+
+    return () => clearInterval(timer);
+  }, [isPaused, currentIndex]);
 
   const current: TestimonialItem = testimonialsData[currentIndex];
 
@@ -24,7 +31,6 @@ export default function Testimonials() {
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -50,8 +56,13 @@ export default function Testimonials() {
 
         {/* Testimonial Card Slider */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-[#F8FAFC] border border-slate-200 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-xl">
-            
+          <div
+            className="relative bg-[#F8FAFC] border border-slate-200 rounded-3xl p-8 sm:p-12 lg:p-14 shadow-xl"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             {/* Background Quote Icon */}
             <Quote className="absolute top-8 right-8 sm:top-12 sm:right-12 w-20 h-20 text-[#263746]/5 pointer-events-none" />
 
@@ -62,24 +73,27 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4 }}
-                className="flex flex-col justify-between min-h-[220px]"
+                className="flex flex-col justify-between min-h-[300px]"
               >
                 <div>
                   {/* Rating Stars */}
                   <div className="flex items-center gap-1 mb-6 text-[#3B82C4]">
                     {[...Array(current.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[#3B82C4] stroke-none" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-[#3B82C4] stroke-none"
+                      />
                     ))}
                   </div>
 
                   {/* Quote Text */}
                   <p className="text-[16px] sm:text-[20px] font-normal text-[#263746] leading-relaxed italic mb-8">
-                    "{current.quote}"
+                    &ldquo;{current.quote}&rdquo;
                   </p>
                 </div>
 
                 {/* Client Profile Footer */}
-                <div className="flex items-center justify-between pt-6 border-t border-slate-300">
+                <div className="flex items-center pt-6 border-t border-slate-300">
                   <div className="flex items-center gap-4">
                     <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#3B82C4] shadow-md">
                       <Image
@@ -91,35 +105,20 @@ export default function Testimonials() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-[16px] font-semibold text-[#263746]">{current.clientName}</h4>
+                      <h4 className="text-[16px] font-semibold text-[#263746]">
+                        {current.clientName}
+                      </h4>
                       <p className="text-[12px] sm:text-[14px] text-[#647586] font-normal">
-                        {current.role}, <span className="text-[#3B82C4] font-semibold">{current.company}</span>
+                        {current.role},{" "}
+                        <span className="text-[#3B82C4] font-semibold">
+                          {current.company}
+                        </span>
                       </p>
                     </div>
                   </div>
-
-                  {/* Slider Controls */}
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={prevTestimonial}
-                      className="p-3 rounded-full bg-white border border-slate-200 text-[#263746] hover:bg-[#3B82C4] hover:text-white transition-colors shadow-xs cursor-pointer"
-                      aria-label="Previous testimonial"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={nextTestimonial}
-                      className="p-3 rounded-full bg-white border border-slate-200 text-[#263746] hover:bg-[#3B82C4] hover:text-white transition-colors shadow-xs cursor-pointer"
-                      aria-label="Next testimonial"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </button>
-                  </div>
                 </div>
-
               </motion.div>
             </AnimatePresence>
-
           </div>
 
           {/* Dots Indicator */}
@@ -136,7 +135,6 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

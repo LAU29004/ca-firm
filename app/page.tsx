@@ -42,7 +42,7 @@ export default function Home() {
       <TeamSection />
 
       {/* Dark Cinematic Leadership Video Section */}
-      <VideoSection />
+      {/* <VideoSection /> */}
 
       {/* Client Endorsements / Testimonials Carousel */}
       <Testimonials />

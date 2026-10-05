@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 import { PhoneCall, ArrowRight, ShieldCheck, Mail } from "lucide-react";
 
 export default function FinalCTA() {
+  const handleCTA = (method: "whatsapp" | "email") => {
+  window.dispatchEvent(
+    new CustomEvent("set-contact-method", { detail: method }),
+  );
+  handleScroll("contact");
+};
+
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -63,7 +70,7 @@ export default function FinalCTA() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
         >
           <button
-            onClick={() => handleScroll("contact")}
+            onClick={() => handleCTA("whatsapp")}
             className="w-full sm:w-auto px-9 py-4 rounded-xl bg-[#3B82C4] hover:bg-[#5BA7D1] text-white font-semibold text-[14px] sm:text-[16px] shadow-xl shadow-[#3B82C4]/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
           >
             <PhoneCall className="w-5 h-5 text-white" />
@@ -71,7 +78,7 @@ export default function FinalCTA() {
           </button>
 
           <button
-            onClick={() => handleScroll("contact")}
+            onClick={() => handleCTA("email")}
             className="w-full sm:w-auto px-9 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-medium text-[14px] sm:text-[16px] border border-white/20 hover:border-[#3B82C4]/40 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Mail className="w-5 h-5 text-[#3B82C4]" />

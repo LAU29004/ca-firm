@@ -65,16 +65,16 @@ export interface SuccessStoryItem {
 }
 
 export const firmDetails = {
-  name: "Apex & Partners",
-  shortName: "Apex CA",
+  name: "Narhari V.Dixit & Co.",
+  shortName: "Narhari V.Dixit & Co.",
   type: "Chartered Accountants",
   registrationNo: "ICAIR-FRN 108954W",
   tagline: "Clarity in Numbers. Confidence in Business.",
   eyebrow: "CHARTERED ACCOUNTANTS • TAX • ADVISORY",
-  phone: "+91 98230 45678",
-  secondaryPhone: "+91 (020) 2567 8900",
-  email: "contact@apexca-advisory.com",
-  secondaryEmail: "tax-desk@apexca-advisory.com",
+  phone: "+91 84462 18093",
+  secondaryPhone: "+91 20 2991 3947",
+  email: " canvdixit@gmail.com",
+  secondaryEmail: "naraharivdixitandco@gmail.com ",
   address: "Suite 602, Apex Corporate Towers, Senapati Bapat Road, Pune, Maharashtra 411016",
   mumbaiAddress: "Level 14, Maker Chambers VI, Nariman Point, Mumbai, Maharashtra 400021",
   officeHours: "Monday – Saturday: 9:30 AM – 7:00 PM",
@@ -295,66 +295,184 @@ export interface DetailedServiceCard {
 
 export const detailedServices: DetailedServiceCard[] = [
   {
-    id: "gst-indirect-tax",
-    title: "GST & Indirect Tax",
-    iconName: "Receipt",
-    badge: "GST & Indirect Tax Practice",
+    id: "audit-assurance",
+    title: "Audit & Assurance",
+    iconName: "ClipboardCheck",
+    badge: "Audit & Assurance Practice",
     accent: "gold",
     groups: [
       {
-        title: "COMPLIANCE",
+        title: "AUDIT SERVICES",
         items: [
-          "Preparation & verification of monthly/quarterly GST returns",
-          "Timely & correct computation of GST liability / payment",
-          "Obtaining GST registration on PAN India basis",
-          "Preparation of Annual Returns",
-          "Verification of records from GST perspective",
-          "GST Audit",
-          "Maintenance & preparation of all statutory records under GST",
-          "Timely reconciliation of returns & books of accounts",
-        ],
-      },
-      {
-        title: "ADVISORY & SUPPORT",
-        items: [
-          "Advisory on applicability of taxes on transactions",
-          "Admissibility of tax benefits, exemptions & other issues",
-          "Preparation & processing of refund/rebate claims (PAN India)",
-          "GST software implementation & training to team members",
-          "Health Check review to analyse GST exposure & risk mitigation",
-          "Reviewing post-GST implementation process & suggesting changes",
-          "Assisting clients & coordinating with department for Assessments & Audits",
+          "Statutory Audit",
+          "Tax Audit",
+          "GST Audit & GST Compliance Review",
+          "Internal Audit",
+          "Stock Audit",
+          "Accounting & Financial Statement Review",
+          "Internal Control Review",
         ],
       },
     ],
   },
+
   {
-    id: "direct-tax",
-    title: "Direct Tax",
+    id: "taxation-regulatory-compliance",
+    title: "Taxation & Regulatory Compliance",
     iconName: "FileText",
-    badge: "Direct Tax & Audit Practice",
+    badge: "Taxation & Regulatory Compliance Practice",
     accent: "blue",
     groups: [
       {
-        title: "TAX & COMPLIANCE",
+        title: "INCOME TAX",
         items: [
-          "Direct Tax advisory services",
-          "Support for completion of assessments under Income Tax Act",
-          "Consultancy for Tax Planning under Income Tax Act",
-          "Preparation of statutory returns under Income Tax Act",
-          "Filing of Income Tax and TDS Returns",
-          "Accounts and System Implementation",
+          "Income Tax Return Filing",
+          "Income Tax Assessments & Notices",
+          "Income Tax Appeals & Representation",
         ],
       },
       {
-        title: "AUDIT & ADVISORY",
+        title: "GST & OTHER COMPLIANCE",
         items: [
-          "Litigation support — drafting replies to show cause notices",
-          "Appeals & representation before authorities during personal hearings",
-          "Conducting Internal Audit, Statutory Audit, Tax Audit",
-          "Conducting Process & System Audits",
-          "Preparation of Project Reports for Bank Finance & Govt. Subsidy",
-          "RERA Certifications",
+          "GST Return Filing",
+          "GST Notices, Audits & Assessments",
+          "GST Refunds & Refund Assistance",
+          "TDS Compliance",
+          "Professional Tax Compliance",
+          "Regulatory & Statutory Compliance Support",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "gst-advisory",
+    title: "GST Advisory",
+    iconName: "Receipt",
+    badge: "GST Advisory Practice",
+    accent: "gold",
+    groups: [
+      {
+        title: "GST ADVISORY & REVIEW",
+        items: [
+          "GST Compliance Review",
+          "GST Audit Support",
+          "Input Tax Credit Review",
+          "GST Classification & Taxability Advisory",
+          "GST Notices & Litigation Support",
+          "GST Refund Advisory",
+          "GST Process & Documentation Review",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "virtual-cfo-mis",
+    title: "Virtual CFO & MIS Services",
+    iconName: "BarChart3",
+    badge: "Virtual CFO & MIS Practice",
+    accent: "blue",
+    groups: [
+      {
+        title: "CFO & MANAGEMENT SERVICES",
+        items: [
+          "Virtual CFO Services",
+          "Monthly / Quarterly MIS",
+          "Management Reporting",
+          "Financial Performance Analysis",
+          "Cash Flow Monitoring",
+          "Working Capital Management",
+          "Budgeting & Forecasting",
+          "Variance Analysis",
+          "Financial Ratios & Business Performance Review",
+          "Management Decision Support",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "business-financial-advisory",
+    title: "Business & Financial Advisory",
+    iconName: "TrendingUp",
+    badge: "Business & Financial Advisory Practice",
+    accent: "gold",
+    groups: [
+      {
+        title: "BUSINESS ADVISORY",
+        items: [
+          "Business Performance Advisory",
+          "Financial Planning & Analysis",
+          "Business Structuring Advisory",
+          "Working Capital & Funding Advisory",
+          "Cost & Profitability Analysis",
+          "Business Process Review",
+          "Internal Control & Risk Review",
+          "Business Growth & Financial Strategy",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "project-reports-feasibility",
+    title: "Project Reports & Business Feasibility",
+    iconName: "FileBarChart",
+    badge: "Project Reports & Feasibility Practice",
+    accent: "blue",
+    groups: [
+      {
+        title: "PROJECT & FINANCIAL REPORTING",
+        items: [
+          "Bank Loan Project Reports",
+          "CMA / Financial Projections",
+          "Project Feasibility Reports",
+          "Business Plan & Financial Projections",
+          "Funding & Finance Documentation Support",
+          "Financial Viability Analysis",
+          "Ratio & Performance Analysis",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "accounting-compliance-support",
+    title: "Accounting & Compliance Support",
+    iconName: "Calculator",
+    badge: "Accounting & Compliance Practice",
+    accent: "gold",
+    groups: [
+      {
+        title: "ACCOUNTING & COMPLIANCE",
+        items: [
+          "Accounting & Book Finalisation",
+          "Financial Statement Preparation",
+          "TDS & Payroll Compliance",
+          "Payroll-related Statutory Compliance",
+          "Company / LLP Annual Compliance Support",
+          "Process & Accounting System Review",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "business-setup-professional-services",
+    title: "Business Setup & Other Professional Services",
+    iconName: "Building2",
+    badge: "Business Setup & Professional Services",
+    accent: "blue",
+    groups: [
+      {
+        title: "BUSINESS SETUP & REGISTRATION",
+        items: [
+          "PAN / TAN Services",
+          "Shop & Establishment Registration",
+          "Business Registration & Structuring Support",
+          "Professional Registrations",
+          "Other Statutory & Compliance Assistance",
         ],
       },
     ],
@@ -520,41 +638,50 @@ export const industriesData: IndustryItem[] = [
 export const testimonialsData: TestimonialItem[] = [
   {
     id: "1",
-    quote: "Apex & Partners completely transformed our corporate financial structure. Their proactive GST and tax planning saved our company over ₹42 Lakhs in unnecessary tax leakages while keeping us 100% compliant.",
-    clientName: "Rajesh Kulkarni",
-    role: "Founder & Managing Director",
-    company: "NovaTech Solutions Pvt Ltd",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    quote:
+      "Narhari V. Dixit & Co. has been a dependable partner for our accounting, taxation, and compliance requirements. Their team is professional, responsive, and ensures that our financial and statutory matters are handled accurately and on time.",
+    clientName: "Rahul Deshmukh",
+    role: "Managing Director",
+    company: "Deshmukh Industries",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
     rating: 5,
   },
   {
     id: "2",
-    quote: "Working with Apex as our Virtual CFO felt like having a veteran co-founder in our boardroom. They crafted our investor financial model, which directly enabled our $3.5M Series A funding round.",
-    clientName: "Ananya Mehta",
-    role: "Co-Founder & CEO",
-    company: "Lumina Health Technologies",
-    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+    quote:
+      "The team at Narhari V. Dixit & Co. has provided excellent guidance on GST, income tax, and financial matters. Their practical approach and timely support have made our compliance processes much more structured and manageable.",
+    clientName: "Neha Kulkarni",
+    role: "Director",
+    company: "Kulkarni Enterprises",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
     rating: 5,
   },
   {
     id: "3",
-    quote: "Their statutory audit team is extraordinarily thorough and professional. They helped us streamline our internal inventory accounting controls across 12 manufacturing units without disrupting daily operations.",
-    clientName: "Vikramaditya Shinde",
+    quote:
+      "We appreciate the thoroughness and professionalism of Narhari V. Dixit & Co. in handling our audit and accounting requirements. Their attention to detail and clear communication gives us confidence in our financial reporting and compliance.",
+    clientName: "Amit Patil",
     role: "Chief Financial Officer",
-    company: "Precision Engineering Corp",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    company: "Patil Engineering Works",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
     rating: 5,
   },
   {
     id: "4",
-    quote: "Punctuality and regulatory precision defined our 6-year association with Apex & Partners. We have never faced a single tax audit penalty since appointing them as our CA firm.",
-    clientName: "Priya Sundaram",
-    role: "Director of Operations",
-    company: "Zenith Retail Chains",
-    avatarUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
+    quote:
+      "Our association with Narhari V. Dixit & Co. has been extremely positive. From statutory compliance and tax matters to ongoing financial advice, their team provides reliable guidance with a strong focus on accuracy, transparency, and timely execution.",
+    clientName: "Priya Shah",
+    role: "Business Owner",
+    company: "Shah Trading & Services",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80",
     rating: 5,
   },
 ];
+
 
 export const successStoriesData: SuccessStoryItem[] = [
   {

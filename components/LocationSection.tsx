@@ -35,66 +35,44 @@ export default function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Visual Map Placeholder Card */}
-          <div className="lg:col-span-7 bg-[#24527A] border border-slate-600/80 rounded-3xl overflow-hidden shadow-2xl relative min-h-[340px] flex flex-col justify-between p-6 sm:p-8">
-            
-            <div className="absolute inset-0 bg-grid-pattern-dark opacity-40 pointer-events-none" />
+<div className="lg:col-span-7 bg-[#24527A] border border-slate-600/80 rounded-3xl overflow-hidden shadow-2xl relative min-h-[340px] flex flex-col justify-between p-6 sm:p-8">
+  <div className="absolute inset-0 bg-grid-pattern-dark opacity-40 pointer-events-none" />
 
-            <div className="relative z-10 flex items-center justify-between">
-              <span className="text-[10px] sm:text-[12px] font-bold text-[#E8F3FA] font-mono tracking-widest uppercase bg-[#24527A]/90 border border-[#3B82C4]/40 px-3.5 py-1.5 rounded-full">
-                Interactive Headquarters Map
-              </span>
-              <span className="text-[12px] text-slate-300 font-medium">Pune & Mumbai Desks</span>
-            </div>
+  <div className="relative z-10 flex items-center justify-between">
+    <span className="text-[10px] sm:text-[12px] font-bold text-[#E8F3FA] font-mono tracking-widest uppercase bg-[#24527A]/90 border border-[#3B82C4]/40 px-3.5 py-1.5 rounded-full">
+      Our Office
+    </span>
+    <span className="text-[12px] text-slate-300 font-medium">Pune</span>
+  </div>
 
-            {/* Central Pin Graphic */}
-            <div className="relative z-10 my-10 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
-              
-              {/* Pune Pin */}
-              <div className="flex flex-col items-center group">
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-[#3B82C4]/20 border-2 border-[#3B82C4] flex items-center justify-center animate-bounce">
-                    <MapPin className="w-6 h-6 text-[#3B82C4]" />
-                  </div>
-                  <div className="w-4 h-1.5 bg-[#3B82C4]/40 rounded-full mx-auto blur-xs mt-1" />
-                </div>
-                <p className="text-[14px] font-bold text-white mt-2">Pune Corporate H.Q.</p>
-                <p className="text-[11px] text-slate-300 font-normal">Senapati Bapat Road</p>
-              </div>
+  {/* Single Pin */}
+  <div className="relative z-10 my-10 flex flex-col items-center justify-center">
+    <div className="relative">
+      <div className="w-14 h-14 rounded-full bg-[#3B82C4]/20 border-2 border-[#3B82C4] flex items-center justify-center animate-bounce">
+        <MapPin className="w-7 h-7 text-[#3B82C4]" />
+      </div>
+      <div className="w-5 h-1.5 bg-[#3B82C4]/40 rounded-full mx-auto blur-xs mt-1" />
+    </div>
+    <p className="text-[14px] font-bold text-white mt-3">Pune Office</p>
+    <p className="text-[11px] text-slate-300 font-normal">Senapati Bapat Road</p>
+  </div>
 
-              {/* Connecting Line */}
-              <div className="hidden sm:block w-24 h-0.5 bg-gradient-to-r from-[#3B82C4] via-slate-500 to-[#3B82C4] border-dashed" />
-
-              {/* Mumbai Pin */}
-              <div className="flex flex-col items-center group">
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-[#24527A] border-2 border-slate-500 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-slate-300" />
-                  </div>
-                  <div className="w-4 h-1.5 bg-slate-500/40 rounded-full mx-auto blur-xs mt-1" />
-                </div>
-                <p className="text-[14px] font-bold text-white mt-2">Mumbai Advisory Desk</p>
-                <p className="text-[11px] text-slate-300 font-normal">Nariman Point</p>
-              </div>
-
-            </div>
-
-            {/* Map Card Footer */}
-            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-slate-600/80 text-[12px]">
-              <span className="text-slate-200 font-normal">
-                📍 {firmDetails.address}
-              </span>
-              <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(firmDetails.address)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#E8F3FA] font-semibold hover:underline"
-              >
-                <Navigation className="w-3.5 h-3.5 text-[#3B82C4]" />
-                <span>Open in Google Maps</span>
-              </a>
-            </div>
-
-          </div>
+  {/* Map Card Footer */}
+  <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-slate-600/80 text-[12px]">
+    <span className="text-slate-200 font-normal">
+      📍 {firmDetails.address}
+    </span>
+    <a
+      href={`https://maps.google.com/?q=${encodeURIComponent(firmDetails.address)}`}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-1.5 text-[#E8F3FA] font-semibold hover:underline"
+    >
+      <Navigation className="w-3.5 h-3.5 text-[#3B82C4]" />
+      <span>Open in Google Maps</span>
+    </a>
+  </div>
+</div>
 
           {/* Location Info Cards */}
           <div className="lg:col-span-5 space-y-4">
@@ -104,7 +82,7 @@ export default function LocationSection() {
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-[16px] sm:text-[18px] font-bold text-white flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-[#3B82C4]" />
-                  <span>Pune • Maharashtra (H.Q.)</span>
+                  <span>Pune • Maharashtra (OFFICE)</span>
                 </h3>
                 <span className="text-[10px] font-medium text-[#E8F3FA] uppercase tracking-widest bg-[#3B82C4]/20 px-2.5 py-1 rounded border border-[#3B82C4]/30">
                   Main Practice
@@ -126,7 +104,7 @@ export default function LocationSection() {
             </div>
 
             {/* Branch Card */}
-            <div className="bg-[#24527A]/80 border border-slate-600/80 rounded-2xl p-6 shadow-xl">
+            {/* <div className="bg-[#24527A]/80 border border-slate-600/80 rounded-2xl p-6 shadow-xl">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-[16px] sm:text-[18px] font-bold text-white flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-slate-400" />
@@ -149,7 +127,7 @@ export default function LocationSection() {
                   {firmDetails.secondaryEmail}
                 </span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 

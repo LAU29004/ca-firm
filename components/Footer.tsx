@@ -126,66 +126,92 @@ export default function Footer() {
 
           {/* Center Right: Core Services */}
           <div className="lg:col-span-3">
-            <h4 className="text-[10px] sm:text-[12px] font-medium text-white uppercase tracking-widest mb-4">
-              Practice Areas
-            </h4>
-            <ul className="space-y-2.5 text-[12px] sm:text-[14px] font-medium">
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  Income Tax Planning & Assessment
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  GST Audit & Returns Compliance
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  Statutory & Internal Audit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  Corporate Accounting & Bookkeeping
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  Virtual CFO & Business Valuation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "#services")}
-                  className="hover:text-[#5BA7D1] transition-colors"
-                >
-                  Payroll & TDS Statutory Filings
-                </a>
-              </li>
-            </ul>
-          </div>
+  <h4 className="text-[10px] sm:text-[12px] font-medium text-white uppercase tracking-widest mb-4">
+    Practice Areas
+  </h4>
+
+  <ul className="space-y-2.5 text-[12px] sm:text-[14px] font-medium">
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Audit & Assurance
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Taxation & Regulatory Compliance
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        GST Advisory
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Virtual CFO & MIS Services
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Business & Financial Advisory
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Project Reports & Business Feasibility
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Accounting & Compliance Support
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#services"
+        onClick={(e) => handleScroll(e, "#services")}
+        className="hover:text-[#5BA7D1] transition-colors"
+      >
+        Business Setup & Other Professional Services
+      </a>
+    </li>
+  </ul>
+</div>
 
           {/* Right Column: Direct Contact Info */}
           <div className="lg:col-span-3 space-y-3 text-[12px] sm:text-[14px]">

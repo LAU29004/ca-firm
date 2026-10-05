@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F3FA] border border-[#3B82C4]/30 text-[#3B82C4] text-[10px] sm:text-[12px] font-medium tracking-widest uppercase mb-4"
           >
             <ShieldCheck className="w-4 h-4 text-[#3B82C4]" />
-            <span>The Apex Advantage</span>
+            <span>The Narhari V.Dixit & Co. Advantage</span>
           </motion.div>
 
           <motion.h2
